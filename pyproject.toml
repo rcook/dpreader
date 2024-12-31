@@ -1,0 +1,10 @@
+[project]
+dependencies = [
+]
+dynamic = ["version"]
+name = "dpreader"
+
+[project.optional-dependencies]
+dev = [
+  "mypy",
+]

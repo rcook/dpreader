@@ -1,19 +1,8 @@
 from argparse import ArgumentParser
-from dpreaderlib.header import Header
-from dpreaderlib.utils import dump
-from dpreaderlib.value_reader import ValueReader
+from dpreaderlib.decode import decode
+from dpreaderlib.dump import dump
 from pathlib import Path
 import sys
-
-
-def decode(path: Path) -> None:
-    with ValueReader.open(path) as f:
-        header = Header.decode(f)
-        print(header.title)
-        for i in range(0, 4):
-            name = f"blob{i}"
-            blob = getattr(header, name)
-            print(f"  {name}: {blob.hex(sep=' ')}")
 
 
 def main(cwd: Path, argv: list[str]):

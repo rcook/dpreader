@@ -2,6 +2,7 @@ from argparse import ArgumentParser
 from dpreaderlib.arg_types import nonnegative_int, path, positive_int
 from dpreaderlib.decode import decode
 from dpreaderlib.dump import DEFAULT_COLUMNS, dump
+from dpreaderlib.wave import wave
 from functools import partial
 from pathlib import Path
 import sys
@@ -28,6 +29,12 @@ def main(cwd: Path, argv: list[str]):
             start=args.start,
             count=args.count,
             columns=args.columns))
+
+    p = parsers.add_parser(name="wave")
+    p.add_argument("path", type=this_path)
+    p.set_defaults(
+        func=lambda args: wave(
+            path=args.path))
 
     args = parser.parse_args(argv)
     args.func(args=args)

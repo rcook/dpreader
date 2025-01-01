@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from dpreader.value_reader import ValueReader
+from dpreaderlib.value_reader import ValueReader
 from typing import TypeVar
 
 

@@ -8,7 +8,7 @@ Dump contents of Tascam DP-006 backup files
 python -m pip install --upgrade pip
 python -m pip install .[dev]
 mypy --install-types --non-interactive
-mypy dpreader.py dpreader
+mypy dpreader.py dpreaderlib
 isopy wrap dpreader .\dpreader.py .
 ```
 

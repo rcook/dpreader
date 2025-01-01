@@ -1,4 +1,4 @@
-from dpreader.helpers import read_bytes, read_obj
+from dpreaderlib.helpers import read_bytes, read_obj
 from io import BufferedReader
 from pathlib import Path
 from types import TracebackType

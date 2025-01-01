@@ -1,7 +1,7 @@
 from argparse import ArgumentParser
-from dpreader.header import Header
-from dpreader.utils import dump
-from dpreader.value_reader import ValueReader
+from dpreaderlib.header import Header
+from dpreaderlib.utils import dump
+from dpreaderlib.value_reader import ValueReader
 from pathlib import Path
 import sys
 
